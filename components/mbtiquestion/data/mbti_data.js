@@ -515,10 +515,11 @@ var mbti_data = (function() {
         getDefaultStrengths: function(jobID){
             return default_strengths[jobID];
         },
+        // return an array contains of recommended classes by jobID
         getRecommendClass: function(jobID) {
             
             if (!recommendClassByJob.hasOwnProperty(jobID)) {
-                return "Unknown";
+                return [];
             }
             
             return recommendClassByJob[jobID];
